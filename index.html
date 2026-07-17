@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="信用卡回饋查詢工具 — 快速查詢最佳刷卡方案，依通路、店家、回饋%數找到最划算的那張卡">
+  <title>💳 刷哪張？— 信用卡回饋速查</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1>💳 刷哪張？</h1>
+      <p>信用卡回饋速查工具 — 出門消費不再選擇困難</p>
+    </header>
+
+    <!-- Toolbar: Search + Filters -->
+    <div class="toolbar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="搜尋卡名、通路、店家…" autocomplete="off">
+      </div>
+      <select id="filter-card" class="filter-select">
+        <option value="">所有卡片</option>
+      </select>
+      <select id="filter-channel" class="filter-select">
+        <option value="">所有通路</option>
+      </select>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-chip">
+        📋 規則數 <span class="stat-value" id="stat-total">0</span>
+      </div>
+      <div class="stat-chip">
+        💳 卡片數 <span class="stat-value" id="stat-cards">0</span>
+      </div>
+    </div>
+
+    <div class="data-bar">
+      <button id="export-btn" class="btn btn-ghost btn-sm">📥 匯出 JSON</button>
+      <button id="import-btn" class="btn btn-ghost btn-sm">📤 匯入 JSON</button>
+      <input type="file" id="import-file" accept=".json" style="display:none">
+    </div>
+
+    <!-- Rules Grid -->
+    <div id="rules-container" class="rules-grid"></div>
+
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts: data layer first, then seed data, then app logic -->
+  <script src="data.js"></script>
+  <script src="seed-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
