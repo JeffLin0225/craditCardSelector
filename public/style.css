@@ -104,6 +104,14 @@ body::before {
   background-clip: text;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header .app-logo {
+  width: 1.4em;
+  height: 1.4em;
 }
 
 .app-header p {

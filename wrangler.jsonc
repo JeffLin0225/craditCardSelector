@@ -1,0 +1,8 @@
+{
+  // Cloudflare Pages 專案「card」（已綁 card.jxlin.dev）
+  // 部署：npx wrangler pages deploy
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "card",
+  "pages_build_output_dir": "./public",
+  "compatibility_date": "2025-07-15"
+}
